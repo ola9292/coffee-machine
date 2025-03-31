@@ -84,11 +84,11 @@ while continue_order:
         continue_order = False
     elif order == "espresso" or order == "latte" or order == "cappuccino":
         if resources['water'] < menu[order]['ingredients']['water']:
-            print(f"sorry there is no enough water")
+            print(f"Sorry there is no enough water")
         elif order != "espresso" and resources['milk'] < menu[order]['ingredients']['milk']:
-            print(f"sorry there is no enough milk")
+            print(f"Sorry there is no enough milk")
         elif resources['coffee'] < menu[order]['ingredients']['coffee']:
-            print(f"sorry there is no enough coffee")
+            print(f"Sorry there is no enough coffee")
         else:
             print("please insert some coins")
             quarters = float(input('how many quarters?: '))
@@ -104,7 +104,7 @@ while continue_order:
             if success:
                 if change > 0:
                     print(f"Here is ${change:.2f} in change")
-                    print(f"Here is {order}")
+                    print(f"Here is {order} ☕, enjoy!")
                 balance += menu[order]['cost']
             else:
                 print(f"sorry there is no enough money")
